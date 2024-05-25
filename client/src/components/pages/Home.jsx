@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import About from "../About";
 import { StylishBtn } from "../common/export"
 import SubNavbar from "../navbar/SubNavbar";
-import Education from "../Education"
 
 const Home = () => {
 
@@ -36,7 +35,7 @@ const Home = () => {
             setTimeout(typing, 60);
         };
 
-        // typing();
+        typing();
 
         return () => clearTimeout(typing);
     }, []);
@@ -83,7 +82,6 @@ const Home = () => {
             <About />
             <section className="min-h-[80vh] py-6">
                 <SubNavbar />
-                <Education />
             </section>
         </>
     )

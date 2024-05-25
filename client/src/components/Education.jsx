@@ -2,7 +2,7 @@ import styles from "./style";
 
 const Education = () => {
     return (
-        <section className="py-6">
+        <section className="py-16">
             <div className="max-w-[1280px] mx-auto">
                 <div className="px-12 border-l-[1px] border-dimWhite w-fit mx-auto flex flex-col gap-6">
                     <div className="content relative bg-boxBg p-6 rounded-xl max-w-[800px] mx-auto">
