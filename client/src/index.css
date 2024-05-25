@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----- CSS Reset Started -----*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+    color: #808dad;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+body {
+    background-color: #0e1630;
+    overflow-x: hidden;
+}
+
+div.pointer {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 26px;
+    height: 42px;
+    border: 2px solid #ffffffaa;
+    border-radius: 26px;
+}
+
+div.pointer:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 100%;
+    background-color: #01d293;
+    animation: cursor 2s linear infinite;
+}
+@keyframes cursor {
+    0% {
+        opacity: 1;
+        top: 5px;
+    }
+    50% {
+        opacity: 0;
+        top: 25px;
+    }
+    100% {
+        opacity: 0;
+        top: 5px;
+    }
+}
+
+hr.borderB {
+    animation: borderB 2s linear infinite;
+}
+
+@keyframes borderB {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.content::before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: calc(50% - 0.5rem);
+    right: calc(100% + 2.5rem);
+    border-radius: 50%;
+    background-color: #e5e7eb;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 0rem);
+    height: 0.1rem;
+    width: 3rem;
+    border-top: 1px dashed #e5e7ebcd;
+}
