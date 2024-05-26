@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import About from "../About";
 import { StylishBtn } from "../common/export"
 import SubNavbar from "../navbar/SubNavbar";
+import Terminal from "../Terminal";
 
 const Home = () => {
 
@@ -83,6 +84,7 @@ const Home = () => {
             <section className="min-h-[80vh] py-6">
                 <SubNavbar />
             </section>
+            <Terminal />
         </>
     )
 }

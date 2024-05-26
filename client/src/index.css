@@ -9,12 +9,13 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    
+
     color: #808dad;
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
+
 body {
     background-color: #0e1630;
     overflow-x: hidden;
@@ -41,12 +42,17 @@ div.pointer:after {
     background-color: #01d293;
     animation: cursor 2s linear infinite;
 }
+
 @keyframes cursor {
     0% {
         opacity: 1;
         top: 5px;
     }
-    50% {
+    40% {
+        opacity: 1;
+        top: 5px;
+    }
+    70% {
         opacity: 0;
         top: 25px;
     }
@@ -91,4 +97,26 @@ hr.borderB {
     height: 0.1rem;
     width: 3rem;
     border-top: 1px dashed #e5e7ebcd;
+}
+
+/* .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+} */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #01d293;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0e1630;
+    border-radius: 7px;
+    margin: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d27101;
 }
