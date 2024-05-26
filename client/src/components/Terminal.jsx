@@ -87,17 +87,21 @@ const Terminal = () => {
                             {history.map((line, index) => (
                                 <p key={index}>{line}</p>
                             ))}
-                            <div>
-                                <span className='text-dimWhite'>krishnasingha@MacBook-Air ~ % &nbsp;</span>
-                                <input
-                                    type="text"
-                                    className="bg-transparent outline-none text-secondary w-[40%]"
-                                    value={currentInput}
-                                    onChange={(e) => setCurrentInput(e.target.value)}
-                                    onKeyDown={handleKeyDown}
-                                    ref={inputRef}
-                                    autoFocus
-                                />
+                            <div className='flex w-full'>
+                                <div className='w-fit flex items-center'>
+                                    <span className='text-dimWhite text-nowrap'>krishnasingha@MacBook-Air ~ % &nbsp;</span>
+                                </div>
+                                <div className='w-full'>
+                                    <input
+                                        type="text"
+                                        className="w-full bg-transparent outline-none text-secondary"
+                                        value={currentInput}
+                                        onChange={(e) => setCurrentInput(e.target.value)}
+                                        onKeyDown={handleKeyDown}
+                                        ref={inputRef}
+                                        autoFocus
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
