@@ -20,6 +20,19 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    document.oncontextmenu = () => {
+        return false;
+    }
+    document.onkeydown = (e) => {
+        if (e.key === 'F12' || e.key === 'f12') {
+            return false;
+        }
+        if (e.ctrlKey && e.key === 'u') {
+            return false;
+        }
+    }
+</script>
 </body>
 
 </html>
