@@ -29,7 +29,7 @@ async function connectToMongoDB() {
 connectToMongoDB();
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Server is running!');
 });
 
 // Route to add a new contact
@@ -47,22 +47,6 @@ app.post('/contact', async (req, res) => {
         return res.status(500).send("Internal Server Error");
     }
 });
-
-// Admin route to fetch contacts from backend
-// app.post('/admin', async (req, res) => {
-//     try {
-//         const { email, password } = req.body;
-//         const user = await authModel.findOne({ email, password });
-//         if (user) {
-//             const response = await contactModel.find({}).sort({ _id: -1 });
-//             return res.send(response);
-//         } else {
-//             return res.send("No Record");
-//         }
-//     } catch (error) {
-//         return res.status(500).send("Internal Server Error");
-//     }
-// });
 
 // Start server
 app.listen(port, () => {

@@ -1,7 +1,7 @@
 {
-  "name": "cyberphoenix",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "cyberphoenix server",
+  "description": "portfolio server",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"

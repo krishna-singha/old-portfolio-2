@@ -27,7 +27,7 @@ const SubNavbar = () => {
                         ${widget === "Skills" && "text-secondary"}`}
                         onClick={() =>
                             toggleSubNav('Skills')}>
-                        Skills
+                        Tech Stack
                     </span>
                 </div>
             </div>

@@ -71,7 +71,7 @@ const Terminal = () => {
             <Heading title="Terminal" />
             <section className="px-4 mt-4 mb-8">
                 <div
-                    className="relative max-w-[1280px] mx-auto px-6 pb-6 border-[1px] border-border h-[40rem] overflow-y-scroll scroll-smooth scroll-hidden rounded-xl"
+                    className="hide-scrollbar relative max-w-[1280px] mx-auto px-6 pb-6 border-[1px] border-border h-[40rem] overflow-y-scroll scroll-smooth scroll-hidden rounded-xl"
                     onClick={handleClick}
                 >
                     <div className="flex items-center gap-2 sticky top-0 h-[3rem] bg-primary">
