@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Template, Home, Blogs, Projects, Contact } from "./components/pages/export"
+import { Template, Home, Blogs, Projects, Contact, Admin, Error } from "./components/pages/export"
 
 function App() {
 
@@ -12,6 +12,8 @@ function App() {
           <Route path='/blogs' element={<Blogs />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>

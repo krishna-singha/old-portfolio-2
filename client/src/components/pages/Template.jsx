@@ -4,7 +4,7 @@ import Footer from "../footer/Footer";
 
 const Template = () => {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Navbar />
             <Outlet />
             <Footer />

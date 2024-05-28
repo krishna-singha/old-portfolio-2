@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Heading from './common/Heading';
 import styles from './style';
 
@@ -6,6 +7,11 @@ const Terminal = () => {
     const [history, setHistory] = useState([]);
     const [currentInput, setCurrentInput] = useState("");
     const inputRef = useRef(null);
+
+    const navigate = useNavigate();
+    const navigateTo = (path) => {
+        navigate(path);
+    };
 
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
@@ -22,6 +28,8 @@ const Terminal = () => {
                 output = (
                     <div>
                         <p className='font-mono'>available commands:</p>
+                        <div><span className='text-secondary'>rd-projects: &nbsp;</span><span>this will redirect you to projects page.</span></div>
+                        <div><span className='text-secondary'>rd-contact: &nbsp;</span><span>this will redirect you to contact me page.</span></div>
                         <div><span className='text-secondary'>my-name: &nbsp;</span><span>tells your name.</span></div>
                         <div><span className='text-secondary'>my-email: &nbsp;</span><span>tells your gmail id.</span></div>
                         <div><span className='text-secondary'>get-loc: &nbsp;</span><span>get your current location.</span></div>
@@ -30,6 +38,20 @@ const Terminal = () => {
                         <div><span className='text-secondary'>clear: &nbsp;</span><span>clears out everything on screen!</span></div>
                     </div>
                 );
+                break;
+            case "rd-projects":
+                output = "redirecting to projects page...";
+                setTimeout(() => {
+                    navigateTo("/projects")
+                }
+                    , 2000);
+                break;
+            case "rd-contact":
+                output = "redirecting to contact me page...";
+                setTimeout(() => {
+                    navigateTo("/contact")
+                }
+                    , 2000);
                 break;
             case "my-name":
                 output = "fetching your name...";

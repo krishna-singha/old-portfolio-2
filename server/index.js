@@ -8,6 +8,7 @@ const cors = require('cors');
 const port = process.env.PORT || 8000;
 const MongoDBUrl = process.env.MONGODB_URL;
 const contactModel = require('./models/contact.model');
+const adminModel = require('./models/admin.model');
 
 // Middleware
 app.use(cors({
@@ -44,6 +45,22 @@ app.post('/contact', async (req, res) => {
         return res.sendStatus(201);
     } catch (error) {
         console.error("Error adding contact:", error);
+        return res.status(500).send("Internal Server Error");
+    }
+});
+
+// Admin route to fetch contacts from backend
+app.post('/admin', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await adminModel.findOne({ email, password });
+        if (user) {
+            const response = await contactModel.find({}).sort({ _id: -1 });
+            return res.send(response);
+        } else {
+            return res.send("No Record");
+        }
+    } catch (error) {
         return res.status(500).send("Internal Server Error");
     }
 });
