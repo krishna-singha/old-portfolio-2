@@ -81,7 +81,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="px-4 py-8 min-h-[100vh] w-full flex flex-col items-center">
+        <section className="px-4 pt-16 pb-8 min-h-[100vh] w-full flex flex-col items-center">
             <Heading title="Contact me" />
             <div className="w-full max-w-[1280px] mx-auto flex items-center justify-between my-[5rem]">
                 <div className="bg-boxBg rounded-md p-6 flex flex-col gap-8 h-fit">

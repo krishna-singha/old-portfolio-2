@@ -4,7 +4,7 @@ import styles from "../style"
 
 const Projects = () => {
     return (
-        <section className="min-h-[100vh] py-8">
+        <section className="min-h-[100vh] pt-16 pb-8">
             <div className="max-w-[1280px] mx-auto">
                 <Heading title="Projects" />
 

@@ -27,7 +27,7 @@ const Admin = () => {
     };
 
     return (
-        <section className='mx-4 py-8 min-h-[100vh]'>
+        <section className='mx-4 pt-16 pb-8 min-h-screen'>
             <div className='max-w-[1280px] mx-auto'>
                 <Heading title='Admin' />
                 {form && (

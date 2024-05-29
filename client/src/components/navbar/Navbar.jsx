@@ -4,7 +4,7 @@ import { navConstrain } from "../constrains";
 
 const Navbar = () => {
     return (
-        <header className="z-[999] sticky top-0 left-0 bg-primary">
+        <header className="z-[999] w-screen fixed top-0 left-0 bg-primary">
             <nav className="flex justify-between items-center max-w-[1280px] mx-auto py-3">
                 <div className="w-[6rem]">
                     <NavLink to={"/"} >
