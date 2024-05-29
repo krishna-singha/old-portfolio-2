@@ -121,7 +121,6 @@ const Terminal = () => {
                                         onChange={(e) => setCurrentInput(e.target.value)}
                                         onKeyDown={handleKeyDown}
                                         ref={inputRef}
-                                        autoFocus
                                     />
                                 </div>
                             </div>

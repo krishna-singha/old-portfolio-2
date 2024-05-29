@@ -1,4 +1,3 @@
-import myImg from "./my-img.png"
 import appleImg1 from "./apple_clone/img_1.png"
 import appleImg2 from "./apple_clone/img_2.png"
 import appleImg3 from "./apple_clone/img_3.png"
@@ -19,7 +18,6 @@ import zerodhaImg2 from "./zerodha_clone/img_2.png"
 import zerodhaImg3 from "./zerodha_clone/img_3.png"
 
 export {
-    myImg,
     appleImg1,
     appleImg2,
     appleImg3,

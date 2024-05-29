@@ -25,6 +25,7 @@ import git from "./git.png"
 import github from "./github.png"
 import vscode from "./vscode.png"
 import bootstrap from "./bootstrap.png"
+import krishna from "./krishna.png"
 
 export {
     logo,
@@ -53,5 +54,6 @@ export {
     git,
     github,
     vscode,
-    bootstrap
+    bootstrap,
+    krishna
 }

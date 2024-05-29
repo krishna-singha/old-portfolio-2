@@ -1,7 +1,6 @@
 import { Heading } from "./common/export"
 import { aboutIcons } from "../assets/img/export"
 import styles from "./style";
-import { NavLink } from "react-router-dom";
 import resume from "../assets/pdf/resume.pdf"
 
 const About = () => {

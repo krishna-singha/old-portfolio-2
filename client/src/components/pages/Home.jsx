@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { socialConstrain } from "../constrains";
 import About from "../About";
 import { StylishBtn } from "../common/export"
 import SubNavbar from "../navbar/SubNavbar";
 import Terminal from "../Terminal";
+import { krishna } from "../../assets/img/export";
 
 const Home = () => {
 
@@ -59,19 +61,20 @@ const Home = () => {
                         </div>
                         <div className="flex gap-6 items-center">
                             <div className="flex flex-col items-center gap-6 text-3xl">
-                                <i className="fa-brands fa-linkedin-in cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
-                                <i className="fa-brands fa-github cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
-                                <i className="fa-brands fa-discord cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
-                                <i className="fa-brands fa-facebook cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
-                                <i className="fa-brands fa-instagram cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
-                                <i className="fa-brands fa-x-twitter cursor-pointer hover:text-secondary hover:scale-[1.1]"></i>
+                                {socialConstrain.map((social, index) => {
+                                    return (
+                                        <a key={index} href={social.link} target="_blank">
+                                            <i className={`fa-brands ${social.icon} cursor-pointer hover:text-secondary hover:scale-[1.1]`}></i>
+                                        </a>
+                                    )
+                                })}
                             </div>
                             <div className="relative w-[25rem] h-[25rem] rounded-full flex justify-center items-center">
                                 <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
 
                                 </div>
                                 <div className=" w-[96%] h-[96%] bg-dimWhite rounded-full z-[3]">
-
+                                    <img src={krishna} alt="" className="rounded-full" />
                                 </div>
                             </div>
                         </div>

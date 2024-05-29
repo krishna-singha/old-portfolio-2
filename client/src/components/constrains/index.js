@@ -20,6 +20,39 @@ const navConstrain = [
     },
 ];
 
+const socialConstrain = [
+    {
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/krishnasingha/',
+        icon: 'fa-linkedin-in'
+    },
+    {
+        title: 'GitHub',
+        link: 'https://github.com/krishna-singha',
+        icon: 'fa-github'
+    },
+    {
+        title: 'Discord',
+        link: 'https://discord.com/channels/@me/1238536205285462087',
+        icon: 'fa-discord'
+    },
+    {
+        title: 'Facebook',
+        link: 'https://www.facebook.com/krishnasingha426/',
+        icon: 'fa-facebook'
+    },
+    {
+        title: 'Instagram',
+        link: 'https://www.instagram.com/krishna___singha/',
+        icon: 'fa-instagram'
+    },
+    {
+        title: 'Twitter',
+        link: 'https://twitter.com/krishna_singha_',
+        icon: 'fa-x-twitter'
+    },
+]
+
 const skillsConstrain = [
     {
         title: 'HTML',
@@ -65,18 +98,18 @@ const skillsConstrain = [
         title: 'MongoDB',
         link: mongodb,
     },
-    // {
-    //     title: 'GraphQL',
-    //     link: graphql,
-    // },
-    // {
-    //     title: 'Redux',
-    //     link: redux,
-    // },
-    // {
-    //     title: 'Firebase',
-    //     link: firebase,
-    // },
+    {
+        title: 'GraphQL',
+        link: graphql,
+    },
+    {
+        title: 'Redux',
+        link: redux,
+    },
+    {
+        title: 'Firebase',
+        link: firebase,
+    },
     {
         title: 'npm',
         link: npm,
@@ -131,8 +164,8 @@ const projectsConstrain = [
         heading: 'Tic Tac Toe',
         img: [tictacImg1, tictacImg2, tictacImg3],
         details: 'Tic Tac Toe is a simple timeless and classic game of two-player contest that unfolds on a 3x3 grid. The project is built using HTML5, CSS3, TypeScript and React.',
-        github: 'https://krishna-singha.github.io/Tic-Tac-Toe',
-        website: 'https://krishna-singha.github.io/Tic-Tac-Toe/',
+        github: 'https://github.com/krishna-singha/Tic-Tac-Toe',
+        website: 'https://krishna-singha.github.io/Tic-Tac-Toe',
     },
     {
         heading: 'Portfolio',
@@ -166,6 +199,7 @@ const projectsConstrain = [
 
 
 export {
+    socialConstrain,
     navConstrain,
     skillsConstrain,
     projectsConstrain,
