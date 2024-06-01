@@ -8,6 +8,7 @@ const Template = () => {
             <Navbar />
             <Outlet />
             <Footer />
+            <div className="pointer"></div>
         </div>
     )
 }

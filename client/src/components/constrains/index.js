@@ -98,18 +98,18 @@ const skillsConstrain = [
         title: 'MongoDB',
         link: mongodb,
     },
-    {
-        title: 'GraphQL',
-        link: graphql,
-    },
+    // {
+    //     title: 'GraphQL',
+    //     link: graphql,
+    // },
     {
         title: 'Redux',
         link: redux,
     },
-    {
-        title: 'Firebase',
-        link: firebase,
-    },
+    // {
+    //     title: 'Firebase',
+    //     link: firebase,
+    // },
     {
         title: 'npm',
         link: npm,

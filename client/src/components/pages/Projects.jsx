@@ -11,7 +11,7 @@ const Projects = () => {
                 <div className="w-full flex flex-wrap gap-6 justify-center mt-8 project">
                     {projectsConstrain.map((project, index) => (
                         <div key={index} className=" flex gap-4 rounded-md">
-                            <div className="w-[25rem] bg-boxBg p-6 pr-16 rounded-md">
+                            <div className="w-[25rem] bg-boxBg hover:bg-[#d8d8d818] p-6 pr-16 rounded-md flex flex-col justify-between">
                                 <div className="">
                                     <h2 className={`${styles.heading2} text-secondary text-center mb-4`}>{project.heading}</h2>
                                     <p className={`${styles.paragraph}`}>{project.details}</p>

@@ -69,7 +69,7 @@ const Admin = () => {
                             </thead>
                             <tbody>
                                 {contacts.map((contact, index) => (
-                                    <tr key={contact._id} className='text-center border-b-[1px] border-border hover:bg-boxBg'>
+                                    <tr key={contact._id} className='text-center border-b-[1px] border-border hover:bg-[#ffffff1d]'>
                                         <td className='max-w-[10px] py-2 text-[1.1rem] cursor-pointer'>{index + 1}</td>
                                         <td className='max-w-[70px] py-2 text-[1.1rem] cursor-pointer'>{contact.name}</td>
                                         <td className='max-w-[100px] py-2 text-[1.1rem] cursor-pointer'>{contact.email}</td>
