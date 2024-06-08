@@ -2,9 +2,9 @@ import styles from "./style";
 
 const Education = () => {
     return (
-        <section className="py-16">
+        <section className="py-16 px-4">
             <div className="max-w-[1280px] mx-auto">
-                <div className="px-12 border-l-[1px] border-dimWhite w-fit mx-auto flex flex-col gap-6">
+                <div className="pl-6 md:px-12 border-l-[1px] border-dimWhite w-fit mx-auto flex flex-col gap-6">
                     <div className="content relative bg-boxBg p-6 rounded-xl max-w-[800px] mx-auto">
                         <div className="flex gap-2 items-center">
                             <i className="fa-regular fa-calendar-check text-secondary"></i>

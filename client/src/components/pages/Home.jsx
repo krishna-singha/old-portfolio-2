@@ -69,7 +69,7 @@ const Home = () => {
                                     <img src={krishna} alt="" className="rounded-full" />
                                 </div>
                             </div>
-                            <div className="flex md:flex-col md:order-1 items-center gap-4 md:gap-6 text-3xl mt-4 md:mt-0">
+                            <div className="flex md:flex-col md:order-1 items-center gap-[1.3rem] md:gap-6 text-3xl mt-4 md:mt-0">
                                 {socialConstrain.map((social, index) => {
                                     return (
                                         <a key={index} href={social.link} target="_blank">
