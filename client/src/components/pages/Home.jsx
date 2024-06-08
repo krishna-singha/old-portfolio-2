@@ -65,7 +65,7 @@ const Home = () => {
                                 <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
 
                                 </div>
-                                <div className="w-[96%] h-[96%] bg-dimWhite rounded-full z-[3]">
+                                <div className="w-[94%] h-[94%] rounded-full z-[3]">
                                     <img src={krishna} alt="" className="rounded-full" />
                                 </div>
                             </div>
