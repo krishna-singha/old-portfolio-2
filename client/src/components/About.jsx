@@ -5,15 +5,15 @@ import resume from "../assets/pdf/resume.pdf"
 
 const About = () => {
     return (
-        <section className="pb-8">
+        <section className="pb-8 px-4">
             <div className="max-w-[1280px] mx-auto">
                 <Heading title="About Me" />
 
-                <div className="flex justify-between items-center gap-8 w-full mt-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full mt-8">
                     <div className="max-w-[30rem]">
                         <img src={aboutIcons} alt="" className="opacity-70" />
                     </div>
-                    <div className="max-w-[40rem] bg-boxBg p-8 rounded-xl">
+                    <div className="max-w-[40rem] bg-boxBg px-4 py-6 md:p-8 rounded-xl">
                         <h4 className={`${styles.heading2} text-dimWhite mb-4`}>LET'S <br /> INTRODUCE ABOUT <br /> MYSELF</h4>
                         <h4 className="hidden">LET'S INTRODUCE ABOUT <br /> MYSELF</h4>
                         <p className={`${styles.paragraph} first-letter:text-secondary`}>Hello! I'm <span>Krishna Singha</span>, a passionate full-stack web developer dedicated to

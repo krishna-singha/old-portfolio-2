@@ -47,20 +47,29 @@ const Home = () => {
         <>
             <section className="min-h-screen px-4 py-8 flex items-center">
                 <div className="max-w-[1280px] w-full mx-auto">
-                    <div className="flex flex-col justify-between items-center my-20 md:px-10 md:flex-row">
+                    <div className="w-full flex flex-col justify-between items-center gap-10 md:gap-0 my-20 md:px-10 md:flex-row">
                         <div>
-                            <p className="text-secondary text-[1.2rem]"> HELLO, MY NAME IS</p>
+                            <p className="text-secondary text-base md:text-[1.2rem]"> HELLO, MY NAME IS</p>
                             <hr className="w-[3rem] border-secondary mt-2" />
 
                             <div className="my-8">
-                                <p className="text-[2.6rem]">Krishna Singha</p>
+                                <p className="text-[2.2rem] md:text-[2.6rem]">Krishna Singha</p>
                                 {/* <span className="text-[1.1rem]">Web Developer</span> */}
-                                <span className="text-[1.1rem]">-- {title}|</span>
+                                <span className="text-base md:text-[1.1rem]">-- {title}|</span>
                             </div>
                             <StylishBtn text="Explore more" />
                         </div>
-                        <div className="flex gap-6 items-center">
-                            <div className="flex flex-col items-center gap-6 text-3xl">
+                        <div className="flex flex-col md:flex-row gap-6 items-center">
+                            
+                            <div className="relative max-w-[25rem] max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
+                                <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
+
+                                </div>
+                                <div className="w-[96%] h-[96%] bg-dimWhite rounded-full z-[3]">
+                                    <img src={krishna} alt="" className="rounded-full" />
+                                </div>
+                            </div>
+                            <div className="flex md:flex-col md:order-1 items-center gap-4 md:gap-6 text-3xl mt-4 md:mt-0">
                                 {socialConstrain.map((social, index) => {
                                     return (
                                         <a key={index} href={social.link} target="_blank">
@@ -68,14 +77,6 @@ const Home = () => {
                                         </a>
                                     )
                                 })}
-                            </div>
-                            <div className="relative w-[25rem] h-[25rem] rounded-full flex justify-center items-center">
-                                <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
-
-                                </div>
-                                <div className=" w-[96%] h-[96%] bg-dimWhite rounded-full z-[3]">
-                                    <img src={krishna} alt="" className="rounded-full" />
-                                </div>
                             </div>
                         </div>
 
