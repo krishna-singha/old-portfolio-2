@@ -61,19 +61,19 @@ const Admin = () => {
                         <table className='w-[1260px]'>
                             <thead>
                                 <tr className='bg-secondary'>
-                                    <th className='text-white font-bold text-xl py-2 px-4'>Sl No</th>
-                                    <th className='text-white font-bold text-xl py-2 px-4'>Name</th>
-                                    <th className='text-white font-bold text-xl py-2 px-4'>Email</th>
-                                    <th className='text-white font-bold text-xl py-2 px-4'>Message</th>
+                                    <th className=' text-white font-bold text-xl py-2 px-4'>Sl No</th>
+                                    <th className=' text-white font-bold text-xl py-2 px-4'>Name</th>
+                                    <th className=' text-white font-bold text-xl py-2 px-4'>Email</th>
+                                    <th className=' text-white font-bold text-xl py-2 px-4'>Message</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {contacts.map((contact, index) => (
                                     <tr key={contact._id} className='text-center border-b-[1px] border-border hover:bg-[#ffffff1d]'>
-                                        <td className='max-w-[10px] py-2 text-[1.1rem] cursor-pointer'>{index + 1}</td>
-                                        <td className='max-w-[70px] py-2 text-[1.1rem] cursor-pointer'>{contact.name}</td>
-                                        <td className='max-w-[100px] py-2 text-[1.1rem] cursor-pointer'>{contact.email}</td>
-                                        <td className='max-w-[300px] py-2 text-[1.1rem] cursor-pointer'>{contact.message}</td>
+                                        <td className='max-w-[100px] py-2 text-[1.1rem] cursor-pointer'>{index + 1}</td>
+                                        <td className='max-w-[260px] py-2 text-[1.1rem] cursor-pointer'>{contact.name}</td>
+                                        <td className='max-w-[400px] py-2 text-[1.1rem] cursor-pointer'>{contact.email}</td>
+                                        <td className='max-w-[500px] py-2 text-[1.1rem] cursor-pointer'>{contact.message}</td>
                                     </tr>
                                 ))}
                             </tbody>

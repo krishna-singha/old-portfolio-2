@@ -16,6 +16,13 @@ import tictacImg3 from "./tic_tac_toe/img_3.png"
 import zerodhaImg1 from "./zerodha_clone/img_1.png"
 import zerodhaImg2 from "./zerodha_clone/img_2.png"
 import zerodhaImg3 from "./zerodha_clone/img_3.png"
+import kdagImg1 from "./kdag/img_1.png"
+import kdagImg2 from "./kdag/img_2.png"
+import kdagImg3 from "./kdag/img_3.png"
+import cyberphoenixImg1 from "./cyberphoenix/img_1.png"
+import cyberphoenixImg2 from "./cyberphoenix/img_2.png"
+import cyberphoenixImg3 from "./cyberphoenix/img_3.png"
+
 
 export {
     appleImg1,
@@ -36,4 +43,10 @@ export {
     zerodhaImg1,
     zerodhaImg2,
     zerodhaImg3,
+    kdagImg1,
+    kdagImg2,
+    kdagImg3,
+    cyberphoenixImg1,
+    cyberphoenixImg2,   
+    cyberphoenixImg3,
 }

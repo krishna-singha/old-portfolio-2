@@ -14,7 +14,7 @@ const SubNavbar = () => {
     return (
         <>
             <div className="flex justify-center">
-                <div className="bg-boxBg flex gap-8 py-3 px-8 rounded-xl text-[1.3rem]">
+                <div className="bg-boxBg flex gap-8 py-3 px-8 rounded-xl text-[1.1rem] md:text-[1.3rem]">
                     <span
                         className={`cursor-pointer hover:text-secondary 
                         ${widget === "Education" && "text-secondary"}`}

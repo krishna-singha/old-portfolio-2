@@ -1,5 +1,5 @@
 import { html, css, scss, tailwind, javascript, typescript, react, next, node, express, mongodb, graphql, redux, firebase, npm, postman, vite, figma, c, cpp, git, github, vscode, bootstrap } from "../../assets/img/export";
-import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, } from "../../assets/images/index"
+import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3 } from "../../assets/images/index"
 
 const navConstrain = [
     {
@@ -10,10 +10,10 @@ const navConstrain = [
         path: '/projects',
         title: 'Projects',
     },
-    // {
-    //     path: '/blogs',
-    //     title: 'Blogs',
-    // },
+    {
+        path: '/blogs',
+        title: 'Blogs',
+    },
     {
         path: '/contact',
         title: 'Contact me',
@@ -154,6 +154,20 @@ const skillsConstrain = [
 
 const projectsConstrain = [
     {
+        heading: 'KDAG Task',
+        img: [kdagImg1, kdagImg2, kdagImg3],
+        details: `This project is a web application designed for the Kharagpur Data Analytics Group's society web team selection process to facilitate course offerings. Built with React, Vite, Node.js, Express.js, and MongoDB`,
+        github: 'https://github.com/krishna-singha/KDAG-Task',
+        website: 'https://kdag-frontend.vercel.app',
+    },
+    {
+        heading: 'Cyberphoenix',
+        img: [cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3],
+        details: 'Developed a modern, responsive website for CyberPhoenix, a cybersecurity startup. The project involved creating an engaging user interface, ensuring seamless navigation, and integrating backend and enhance client interaction.',
+        github: '',
+        website: 'https://cyberphoenix-virid.vercel.app',
+    },
+    {
         heading: 'QR Code Generator',
         img: [qrcodeImg1, qrcodeImg2, qrcodeImg3],
         details: 'This is a simple QR code generator web application that allows users to create QR codes for various types of data. The project is built using HTML5, CSS3 and JavaScript.',
@@ -168,7 +182,7 @@ const projectsConstrain = [
         website: 'https://krishna-singha.github.io/Tic-Tac-Toe',
     },
     {
-        heading: 'Portfolio',
+        heading: 'Old Portfolio',
         img: [portfolioImg1, portfolioImg2, portfolioImg3],
         details: 'Welcome to my personal portfolio website! This website is designed to provide an overview of my professional background, showcase my projects, skills, education, blogs, and more.',
         github: '',

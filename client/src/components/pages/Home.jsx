@@ -61,11 +61,11 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col md:flex-row gap-6 items-center">
                             
-                            <div className="relative max-w-[25rem] max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
+                            <div className="relative max-w-[20rem] max-h-[20rem] md:max-w-[25rem] md:max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
                                 <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
 
                                 </div>
-                                <div className="w-[94%] h-[94%] rounded-full z-[3]">
+                                <div className="w-[96%] h-[96%] rounded-full z-[3]">
                                     <img src={krishna} alt="" className="rounded-full" />
                                 </div>
                             </div>

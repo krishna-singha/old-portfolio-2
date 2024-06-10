@@ -1,8 +1,15 @@
+import { Heading ,BlogsCard } from "../common/export";
+
 const Blogs = () => {
     return (
-        <section className="min-h-[80vh] flex justify-center items-center">
-            <div className="max-w-[1280px] mx-auto">
-                <h1>This is a Blogs page</h1>
+        <section className="min-h-screen pt-16 pb-6">
+            <Heading title="Blogs" />
+            <div className="max-w-[1280px] mx-auto flex justify-center flex-wrap gap-4 mt-6">
+                <BlogsCard />
+                <BlogsCard />
+                <BlogsCard />
+                <BlogsCard />
+                <BlogsCard />
             </div>
         </section>
     )

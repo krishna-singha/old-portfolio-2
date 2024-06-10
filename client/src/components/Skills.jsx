@@ -2,7 +2,7 @@ import { skillsConstrain } from "./constrains";
 
 const Skills = () => {
     return (
-        <section className="py-16">
+        <section className="py-16 px-4">
             <div className="max-w-[1280px] mx-auto flex flex-wrap gap-6 justify-center">
                 {skillsConstrain.map((skill, index) => {
                     return (
