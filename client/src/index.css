@@ -146,23 +146,23 @@ hr.borderB {
 }
 
 /* projects */
-.project img {
+.project .tilt-img img {
     position: relative;
     width: 13rem;
 }
 
-.project img:nth-child(1) {
+.project .tilt-img img:nth-child(1) {
     rotate: 20deg;
     transform: translateY(2.3rem);
     z-index: 1;
 }
 
-.project img:nth-child(2) {
+.project .tilt-img img:nth-child(2) {
     transform: translateX(-2rem);
     z-index: 2;
 }
 
-.project img:nth-child(3) {
+.project .tilt-img img:nth-child(3) {
     rotate: -20deg;
     transform: translateY(-2.3rem);
     z-index: 1;

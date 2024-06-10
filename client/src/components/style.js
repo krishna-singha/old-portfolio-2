@@ -5,7 +5,7 @@ const styles = {
   // heading3: "font-poppins font-semibold w-full text-[20px] text-white sm:text-[24px] sm:leading-[36px]",
 
   heading2: "font-semibold text-[1.5rem] md:text-[1.8rem]",
-  heading3: "text-[1.3rem]",
+  heading3: "text-[1.2rem] md:text-[1.3rem]",
   heading4: "text-[2.5rem]",
 
   paragraph: "text-base md:text-[1.2rem]",

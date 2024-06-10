@@ -47,7 +47,7 @@ const Home = () => {
         <>
             <section className="min-h-screen px-4 py-8 flex items-center">
                 <div className="max-w-[1280px] w-full mx-auto">
-                    <div className="w-full flex flex-col justify-between items-center gap-10 md:gap-0 my-20 md:px-10 md:flex-row">
+                    <div className="w-full flex flex-col justify-between items-center gap-10 sm:gap-0 my-20 sm:px-10 sm:flex-row">
                         <div>
                             <p className="text-secondary text-base md:text-[1.2rem]"> HELLO, MY NAME IS</p>
                             <hr className="w-[3rem] border-secondary mt-2" />
