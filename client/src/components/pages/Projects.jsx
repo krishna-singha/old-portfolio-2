@@ -37,7 +37,7 @@ const Projects = () => {
                                 )}
                                 <div className="">
                                     <h2 className={`${styles.heading2} text-secondary text-center mb-4`}>{project.heading}</h2>
-                                    <p className={`${styles.paragraph} ${mobileVersion && "text-center"}`}>{project.details}</p>
+                                    <p className={`${styles.paragraph} ${mobileVersion ? "text-center" : "mr-8"}`}>{project.details}</p>
                                 </div>
                                 <div className="flex justify-center gap-6 mt-6">
                                     {project.website === "" ? "" :

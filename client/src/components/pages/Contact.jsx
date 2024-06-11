@@ -83,7 +83,7 @@ const Contact = () => {
     return (
         <section className="px-4 pt-16 pb-8 min-h-[100vh] w-full flex flex-col items-center">
             <Heading title="Contact me" />
-            <div className="w-full max-w-[1280px] mx-auto flex items-center justify-between my-[5rem]">
+            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row gap-6 items-center justify-between my-[5rem]">
                 <div className="bg-boxBg rounded-md p-6 flex flex-col gap-8 h-fit">
                     <div>
                         <p className={`${styles.heading4} text-dimWhite`}>Let's discuss <br /> on something <span className="text-secondary">cool</span> <br /> together</p>
@@ -106,7 +106,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="bg-boxBg rounded-md p-6 w-[30rem] h-fit">
+                <div className="bg-boxBg rounded-md p-6 max-w-[30rem] w-full h-fit">
                     <h1 className="text-center text-xl font-semibold text-dimWhite mb-6">Send Me Message</h1>
                     <form onSubmit={handleSubmitForm} className="flex flex-col gap-4">
                         <div className="flex flex-col gap-2 relative form-control">
