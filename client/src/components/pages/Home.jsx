@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="max-w-[1280px] w-full mx-auto">
                     <div className="w-full flex flex-col justify-between items-center gap-10 sm:gap-0 my-20 sm:px-10 sm:flex-row">
                         <div>
-                            <p className="text-secondary text-base md:text-[1.2rem]"> HELLO, MY NAME IS</p>
+                            <p className="text-secondary text-base md:text-[1.2rem]"> HELLO! 👋 MY NAME IS</p>
                             <hr className="w-[3rem] border-secondary mt-2" />
 
                             <div className="my-8">
@@ -61,7 +61,7 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col md:flex-row gap-6 items-center">
                             
-                            <div className="relative max-w-[20rem] max-h-[20rem] md:max-w-[25rem] md:max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
+                            <div className="relative max-w-[18rem] max-h-[18rem] md:max-w-[25rem] md:max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
                                 <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
 
                                 </div>

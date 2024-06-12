@@ -1,4 +1,4 @@
-import { html, css, scss, tailwind, javascript, typescript, react, next, node, express, mongodb, graphql, redux, firebase, npm, postman, vite, figma, c, cpp, git, github, vscode, bootstrap } from "../../assets/img/export";
+import { html, css, scss, tailwind, javascript, typescript, react, next, node, express, mongodb, graphql, redux, firebase, auth0, jwt, npm, ejs, postman, vite, restapi, figma, canva, c, cpp, git, github, vscode, bootstrap, vercel, netlify, railway } from "../../assets/img/export";
 import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3 } from "../../assets/images/index"
 
 const navConstrain = [
@@ -111,8 +111,20 @@ const skillsConstrain = [
     //     link: firebase,
     // },
     {
+        title: 'Auth0',
+        link: auth0,
+    },
+    {
+        title: 'JWT',
+        link: jwt,
+    },
+    {
         title: 'npm',
         link: npm,
+    },
+    {
+        title: 'EJS',
+        link: ejs,
     },
     {
         title: 'Postman',
@@ -123,8 +135,16 @@ const skillsConstrain = [
         link: vite,
     },
     {
+        title: 'REST API',
+        link: restapi,
+    },
+    {
         title: 'Figma',
         link: figma,
+    },
+    {
+        title: 'Canva',
+        link: canva,
     },
     {
         title: 'C',
@@ -149,6 +169,18 @@ const skillsConstrain = [
     {
         title: 'Bootstrap',
         link: bootstrap,
+    },
+    {
+        title: 'Vercel',
+        link: vercel,
+    },
+    {
+        title: 'Netlify',
+        link: netlify,
+    },
+    {
+        title: 'Railway',
+        link: railway,
     },
 ];
 
