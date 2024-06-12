@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Heading from '../common/Heading';
 import styles from '../style';
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+import { BACKEND_URL } from "../../config"
 
 const Admin = () => {
     const [contacts, setContacts] = useState([]);
