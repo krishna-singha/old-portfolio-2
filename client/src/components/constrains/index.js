@@ -10,10 +10,10 @@ const navConstrain = [
         path: '/projects',
         title: 'Projects',
     },
-    {
-        path: '/blogs',
-        title: 'Blogs',
-    },
+    // {
+    //     path: '/blogs',
+    //     title: 'Blogs',
+    // },
     {
         path: '/contact',
         title: 'Contact me',
