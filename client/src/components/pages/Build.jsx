@@ -17,7 +17,7 @@ const Build = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const isbudget = (budget) => {
-        if (budget < 1500) return false;
+        if (budget < 2000) return false;
         return true;
     }
     const isEmail = (email) => {
@@ -52,10 +52,17 @@ const Build = () => {
         // validate project details input
         if (!formData.projectDetails) {
             newErrors.projectDetails = "Project details is required";
-        } else if (formData.projectDetails.length <= 10) {
-            newErrors.projectDetails = "Project details must contains 10 characters"
-        } else if (formData.projectDetails.length > 500) {
-            newErrors.projectDetails = "Project details cannot exceed 500 characters";
+        } else if (formData.projectDetails.length <= 50) {
+            newErrors.projectDetails = "Project details must contains 50 characters"
+        } else if (formData.projectDetails.length > 1000) {
+            newErrors.projectDetails = "Project details cannot exceed 1000 characters";
+        }
+
+        // validate budget input
+        if (!formData.budget) {
+            newErrors.budget = "Budget is required";
+        } else if (!isbudget(formData.budget)) {
+            newErrors.budget = "Budget must be greater than ₹2000";
         }
         return newErrors;
     };
@@ -67,7 +74,7 @@ const Build = () => {
             [name]: value
         });
     };
-
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
         setIsSubmitting(true);
@@ -83,12 +90,18 @@ const Build = () => {
                     projectDetails: '',
                     budget: ''
                 });
-                toast.success("Message sent successfully");
-            } catch (error) {
-                toast.error("Message not sent");
+                toast.success("Project details sent successfully");
+                setIsSubmitting(false);
+            }
+            catch (error) {
+                toast.error("Project details not sent");
             } finally {
                 setIsSubmitting(false);
             }
+        } else {
+            toast.error("Message not sent");
+            setErrors(newErrors);
+            setIsSubmitting(false);
         }
     };
 
@@ -102,11 +115,11 @@ const Build = () => {
                         <input
                             type="text"
                             name="name"
+                            id='name'
                             value={formData.name}
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
                             placeholder='Full Name'
-                            required
                         />
                         {errors.name && <small className="text-red-400">{errors.name}</small>}
                     </label>
@@ -115,13 +128,13 @@ const Build = () => {
                         <input
                             type="email"
                             name="email"
+                            id='email'
                             value={formData.email}
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
                             placeholder='Email'
-                            required
                         />
-                        <small className='text-red-500'>Err</small>
+                        {errors.email && <small className="text-red-400">{errors.email}</small>}
                     </label>
                     {/* <label className='flex flex-col gap-2'>
                         Your Phone:
@@ -132,7 +145,6 @@ const Build = () => {
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
                             placeholder='Phone number'
-                            required
                         />
                         <small className='text-red-500'>Err</small>
                     </label> */}
@@ -140,26 +152,26 @@ const Build = () => {
                         Project Details:
                         <textarea
                             name="projectDetails"
+                            id='projectDetails'
                             value={formData.projectDetails}
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
                             placeholder='Project Details'
-                            required
                         ></textarea>
-                        <small className='text-red-500'>Err</small>
+                        {errors.projectDetails && <small className="text-red-400">{errors.projectDetails}</small>}
                     </label>
                     <label className='flex flex-col gap-2'>
-                        Your budget (min: ₹1500):
+                        Your budget (min: ₹2000):
                         <input
                             type="number"
                             name="budget"
+                            id='budget'
                             value={formData.budget}
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
                             placeholder='Budget'
-                            required
                         />
-                        <small className='text-red-500'>Err</small>
+                        {errors.budget && <small className="text-red-400">{errors.budget}</small>}
                     </label>
                     <button
                         type='submit'

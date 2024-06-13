@@ -12,6 +12,7 @@ const Contact = () => {
         message: ""
     });
 
+    const [isSending, setIsSending] = useState(false);
     const [errors, setErrors] = useState({});
 
     const handleInput = (event) => {
@@ -63,6 +64,7 @@ const Contact = () => {
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
+        setIsSending(true);
         const newErrors = validateInputs();
         if (Object.keys(newErrors).length === 0) {
             setErrors({});
@@ -73,10 +75,13 @@ const Contact = () => {
             }
             catch (error) {
                 toast.error("Message not sent");
+            } finally {
+                setIsSending(false);
             }
         } else {
             toast.error("Message not sent");
             setErrors(newErrors);
+            setIsSending(false);
         }
     };
 
@@ -147,7 +152,9 @@ const Contact = () => {
                             ></textarea>
                             {errors.message && <small className="text-red-400">{errors.message}</small>}
                         </div>
-                        <button type="submit" className="bg-secondary text-white py-2 mt-4 rounded-md text-xl w-full">Send</button>
+                        <button type="submit" className="bg-secondary text-white py-2 mt-4 rounded-md text-xl w-full">
+                        {isSending ? 'Sending...' : 'Send'}
+                        </button>
                     </form>
                 </div>
             </div>

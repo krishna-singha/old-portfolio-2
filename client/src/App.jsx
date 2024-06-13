@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Template, Home, Blogs, Projects, Contact, Admin, Build, BuildTemp, Error } from "./components/pages/export"
+import { Template, Home, Blogs, Projects, Contact, Admin, Build, Error } from "./components/pages/export"
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/admin' element={<Admin />} />
-          <Route path='/build' element={<BuildTemp />} />
+          <Route path='/build' element={<Build />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>

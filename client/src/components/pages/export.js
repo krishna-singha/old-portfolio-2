@@ -5,7 +5,6 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Admin from "./Admin";
 import Build from "./Build";
-import BuildTemp from "./Build.temp";
 import Error from "./Error";
 
 export {
@@ -16,6 +15,5 @@ export {
     Contact,
     Admin,
     Build,
-    BuildTemp,
     Error,
 }

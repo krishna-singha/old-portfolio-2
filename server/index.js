@@ -80,12 +80,12 @@ app.delete('/admin/:id', async (req, res) => {
 // Route to add a new build
 app.post('/build', async (req, res) => {
     try {
-        const { name, email, phone, details, budget } = req.body;
+        const { name, email, phone, projectDetails, budget } = req.body;
         await buildModel.create({
             name,
             email,
             phone,
-            details,
+            projectDetails,
             budget,
         });
         return res.sendStatus(201);
