@@ -33,7 +33,7 @@ import bootstrap from "./bootstrap.png"
 import vercel from "./vercel.png"
 import netlify from "./netlify.svg"
 import railway from "./railway.svg"
-import krishna from "./krishna.png"
+import krishna from "./krishna.jpg"
 import blank from "./blank.jpg"
 
 export {

@@ -22,7 +22,7 @@ const Admin = () => {
             body: JSON.stringify({ email, password }),
         });
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         if (response.status === 401) {
             toast.error('Invalid credentials');
             setLoading(false);
