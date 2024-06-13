@@ -45,9 +45,9 @@ const Home = () => {
 
     return (
         <>
-            <section className="min-h-screen px-4 py-8 flex items-center">
-                <div className="max-w-[1280px] w-full mx-auto">
-                    <div className="w-full flex flex-col justify-between items-center gap-10 sm:gap-0 my-20 sm:px-10 sm:flex-row">
+            <section className="px-4 py-20 flex items-center">
+                <div className="max-w-[1280px] w-full mx-auto mt-36">
+                    <div className="w-full flex flex-col justify-between items-center gap-10 sm:gap-0 sm:px-10 sm:flex-row">
                         <div>
                             <p className="text-secondary text-base md:text-[1.2rem]"> HELLO! 👋 MY NAME IS</p>
                             <hr className="w-[3rem] border-secondary mt-2" />
@@ -55,17 +55,17 @@ const Home = () => {
                             <div className="my-8">
                                 <p className="text-[2.2rem] md:text-[2.6rem]">Krishna Singha</p>
                                 {/* <span className="text-[1.1rem]">Web Developer</span> */}
-                                <span className="text-base md:text-[1.1rem]">-- {title}|</span>
+                                <span className="text-base md:text-[1.1rem]">-- I'm a {title}|</span>
                             </div>
                             <StylishBtn text="Explore more" />
                         </div>
                         <div className="flex flex-col md:flex-row gap-6 items-center">
                             
                             <div className="relative max-w-[18rem] max-h-[18rem] md:max-w-[25rem] md:max-h-[25rem] rounded-full flex justify-center items-center md:order-2">
-                                <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
+                                <div className="absolute transitiona-all duration-1000 opacity-40 -inset-px bg-gradient-to-r animate-pulse from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg animate-tilt z-[2]">
 
                                 </div>
-                                <div className="w-[96%] h-[96%] rounded-full z-[3]">
+                                <div className="w-[100%] h-[100%] rounded-full z-[3]">
                                     <img src={krishna} alt="" className="rounded-full" />
                                 </div>
                             </div>

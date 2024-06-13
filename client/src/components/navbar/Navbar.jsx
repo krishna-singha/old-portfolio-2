@@ -18,7 +18,7 @@ const Navbar = () => {
             <nav className="flex justify-between items-center max-w-[1280px] mx-auto py-3 px-4 relative">
                 <div className="w-[6rem]">
                     <NavLink to={"/"} onClick={() => closeMenu()} >
-                        <h1 className="first-letter:text-secondary text-white text-3xl font-[600]">Krishna</h1>
+                        <h1 className="first-letter:text-secondary text-white text-3xl font-[400]">Krishna</h1>
                     </NavLink>
                 </div>
                 <div className={`flex flex-col items-center min-h-[70vh] ss:min-h-fit py-8 ss:py-0 absolute top-14 right-0 w-full bg-boxBg ss:flex ss:flex-row ss:justify-end ss:relative ss:top-0 ss:bg-transparent gap-8 ${showMenu ? "" : "hidden"}`}>
