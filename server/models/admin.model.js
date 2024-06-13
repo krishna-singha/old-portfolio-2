@@ -11,4 +11,8 @@ const adminSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Admin', adminSchema);
+// Creating Contact Model
+const adminModel = mongoose.model('Admin', adminSchema);
+
+// Exporting the model
+module.exports = adminModel;

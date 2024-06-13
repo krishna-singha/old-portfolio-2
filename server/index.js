@@ -10,11 +10,12 @@ const MongoDBUrl = process.env.MONGODB_URL;
 const { FRONTEND_URL } = require('./config');
 const contactModel = require('./models/contact.model');
 const adminModel = require('./models/admin.model');
+const buildModel = require('./models/build.model');
 
 // Middleware
 app.use(cors({
     origin: FRONTEND_URL,
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'DELETE'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -57,11 +58,39 @@ app.post('/admin', async (req, res) => {
         const user = await adminModel.findOne({ email, password });
         if (user) {
             const response = await contactModel.find({}).sort({ _id: -1 });
-            return res.send(response);
-        } else {
-            return res.send("No Record");
+            return res.status(200).send(response);
         }
+        return res.status(401).send({ email: "", password: "", createdAt: "" });
     } catch (error) {
+        return res.status(500).send("Internal Server Error");
+    }
+});
+
+// Admin route to delete a contact
+app.delete('/admin/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        await contactModel.findOneAndDelete({ _id: id });
+        return res.status(200).send("Deleted");
+    } catch (error) {
+        return res.status(500).send("Internal Server Error");
+    }
+});
+
+// Route to add a new build
+app.post('/build', async (req, res) => {
+    try {
+        const { name, email, phone, details, budget } = req.body;
+        await buildModel.create({
+            name,
+            email,
+            phone,
+            details,
+            budget,
+        });
+        return res.sendStatus(201);
+    } catch (error) {
+        console.error("Error adding build:", error);
         return res.status(500).send("Internal Server Error");
     }
 });

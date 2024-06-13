@@ -5,10 +5,9 @@ const contactSchema = new mongoose.Schema({
     name: String,
     email: String,
     message: String,
-    time: {
-        type: String,
-        default: Date().slice(4, 21),
-    }
+},
+{
+    timestamps: true,
 });
 
 // Creating Contact Model
