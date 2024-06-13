@@ -64,7 +64,7 @@ const Home = () => {
                             </div>
                             {/* <StylishBtn text="Explore more" /> */}
                             <div>
-                                <p className="text-[1.1rem]">Let's Build Your Website Together</p>
+                                <p className="text-[1.1rem]">I am available for <span className="text-secondary">freelancing</span> <br />Let's build your website together</p>
                                 <div className="mt-6">
                                     <NavLink to={"/build"} className="bg-[#ffffff2f] text-white px-4 py-2 rounded-md text-[1.1rem] hover:bg-secondary hover:text-black">Click here!</NavLink>
                                 </div>

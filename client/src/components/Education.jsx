@@ -11,7 +11,7 @@ const Education = () => {
                             <p className="text-secondary">2023 - 2027</p>
                         </div>
                         <h3 className={`${styles.heading3} my-3 text-dimWhite`}>Bachelor's Degree</h3>
-                        <p className={`${styles.paragraph}`}>Hello! Currently, I am a second-year undergraduate student at the <span className="text-secondary">Indian Institute of Technology Kharagpur</span>, West Bengal, pursuing a B.Tech. in <span className="text-secondary">Computer Science and Engineering</span>.</p>
+                        <p className={`${styles.paragraph}`}>Hello! Currently, I am a second-year undergraduate student at the <span className="text-secondary">Indian Institute of Technology Kharagpur</span>, West Bengal, pursuing a B.Tech. course in the department of <span className="text-secondary">Computer Science and Engineering</span>.</p>
                     </div>
                     <div className="content relative bg-boxBg p-6 rounded-xl max-w-[800px] mx-auto">
                         <div className="flex gap-2 items-center">

@@ -94,12 +94,12 @@ const Contact = () => {
                             <span>krishnasingha.dev@gmail.com</span>
                         </a>
                     </div>
-                    <div>
+                    {/* <div>
                         <a href="https://wa.me/+916296189929" className={`${styles.paragraph}`}>
                             <i className="fa-solid fa-phone mr-3"></i>
                             <span>+91-6296189929</span>
                         </a>
-                    </div>
+                    </div> */}
                     <div className={`${styles.paragraph}`}>
                         <i className="fa-solid fa-location-dot mr-3"></i>
                         <span>Kharagpur, West Bengal</span>
