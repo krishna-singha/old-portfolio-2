@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Heading from '../common/Heading';
 import styles from '../style';
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+import { BACKEND_URL } from "../../config"
 import axios from "axios";
 import { toast } from 'react-toastify';
 
@@ -55,8 +55,8 @@ const Contact = () => {
             newErrors.message = "Message is required";
         } else if (formData.message.length <= 10) {
             newErrors.message = "Message must contains 10 characters"
-        } else if (formData.message.length > 200) {
-            newErrors.message = "Message cannot exceed 200 characters";
+        } else if (formData.message.length > 500) {
+            newErrors.message = "Message cannot exceed 500 characters";
         }
         return newErrors;
     };
