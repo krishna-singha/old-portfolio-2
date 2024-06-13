@@ -218,7 +218,7 @@ const projectsConstrain = [
         img: [portfolioImg1, portfolioImg2, portfolioImg3],
         details: 'Welcome to my personal portfolio website! This website is designed to provide an overview of my professional background, showcase my projects, skills, education, blogs, and more.',
         github: '',
-        website: 'https://ksingha.design',
+        website: 'https://krishna-singha.github.io/old-portfolio/',
     },
     {
         heading: 'MedConsole Pro',
