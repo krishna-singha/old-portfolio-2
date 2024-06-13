@@ -74,7 +74,7 @@ const Build = () => {
             [name]: value
         });
     };
-    
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setIsSubmitting(true);
@@ -106,8 +106,8 @@ const Build = () => {
     };
 
     return (
-        <section className="min-h-screen pt-16 flex justify-center items-center">
-            <div className="p-8 w-full max-w-lg">
+        <section className="px-4 min-h-screen pt-16 pb-8 flex justify-center items-center">
+            <div className=" w-full max-w-lg">
                 <Heading title="Let's Build Your Website" />
                 <form onSubmit={handleSubmit} className='bg-boxBg p-6 rounded-md flex flex-col gap-4 mt-8'>
                     <label className='flex flex-col gap-2'>
@@ -153,6 +153,7 @@ const Build = () => {
                         <textarea
                             name="projectDetails"
                             id='projectDetails'
+                            rows={4}
                             value={formData.projectDetails}
                             onChange={handleChange}
                             className='py-2 px-4 rounded-md bg-[#ffffff2f] text-white border-[2px] border-transparent focus:border-dimWhite outline-none'
