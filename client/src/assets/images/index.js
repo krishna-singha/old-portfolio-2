@@ -22,6 +22,9 @@ import kdagImg3 from "./kdag/img_3.png"
 import cyberphoenixImg1 from "./cyberphoenix/img_1.png"
 import cyberphoenixImg2 from "./cyberphoenix/img_2.png"
 import cyberphoenixImg3 from "./cyberphoenix/img_3.png"
+import virtuogolaImg1 from "./virtuogola/img_1.png"
+import virtuogolaImg2 from "./virtuogola/img_2.png"
+import virtuogolaImg3 from "./virtuogola/img_3.png"
 
 
 export {
@@ -49,4 +52,7 @@ export {
     cyberphoenixImg1,
     cyberphoenixImg2,   
     cyberphoenixImg3,
+    virtuogolaImg1,
+    virtuogolaImg2,
+    virtuogolaImg3,
 }

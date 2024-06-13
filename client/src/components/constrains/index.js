@@ -1,5 +1,5 @@
 import { html, css, scss, tailwind, javascript, typescript, react, next, node, express, mongodb, graphql, redux, firebase, auth0, jwt, npm, ejs, postman, vite, restapi, figma, canva, c, cpp, git, github, vscode, bootstrap, vercel, netlify, railway } from "../../assets/img/export";
-import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3 } from "../../assets/images/index"
+import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3, virtuogolaImg1, virtuogolaImg2, virtuogolaImg3 } from "../../assets/images/index"
 
 const navConstrain = [
     {
@@ -186,60 +186,104 @@ const skillsConstrain = [
 
 const projectsConstrain = [
     {
+        heading: 'URL Shortner',
+        img: ["", "", ""],
+        details: `URL Shortener is a tool designed to shorten long URLs into shorter, more readable links. It's particularly useful for sharing links on social media platforms, in emails, or wherever space is limited.`,
+        tech: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Vercel'],
+        type: 'Personal',
+        status: 'Ongoing',
+        github: '',
+        website: '',
+    },
+    {
+        heading: 'VirtuoGola',
+        img: [virtuogolaImg1, virtuogolaImg2, virtuogolaImg3],
+        details: `VirtuoGola allows users to post content such as text, images, or videos and interact with each other through likes and comments.`,
+        tech: ['TypeScipt', 'React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Redux', 'Vercel'],
+        type: 'Personal',
+        status: 'Ongoing',
+        github: '',
+        website: '',
+    },
+    {
         heading: 'KDAG Task',
         img: [kdagImg1, kdagImg2, kdagImg3],
-        details: `This project is a web application designed for the Kharagpur Data Analytics Group's society web team selection process to facilitate course offerings. Built with React, Vite, Node.js, Express.js, and MongoDB`,
+        details: `This project is a web application designed for the Kharagpur Data Analytics Group's society web team selection process to facilitate course offerings.`,
         github: 'https://github.com/krishna-singha/KDAG-Task',
         website: 'https://kdag-frontend.vercel.app',
+        status: 'Completed',
+        tech: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Vercel'],
+        type: 'Task'
     },
     {
         heading: 'Cyberphoenix',
         img: [cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3],
-        details: 'Developed a modern, responsive website for CyberPhoenix, a cybersecurity startup. The project involved creating an engaging user interface, ensuring seamless navigation, and integrating backend and enhance client interaction.',
+        details: 'Developed a modern, responsive website for CyberPhoenix, a cybersecurity startup. The project involved creating an engaging user interface.',
         github: '',
         website: 'https://cyberphoenix-virid.vercel.app',
+        status: 'Completed',
+        tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Vercel'],
+        type: 'Freelance'
     },
     {
         heading: 'QR Code Generator',
         img: [qrcodeImg1, qrcodeImg2, qrcodeImg3],
-        details: 'This is a simple QR code generator web application that allows users to create QR codes for various types of data. The project is built using HTML5, CSS3 and JavaScript.',
+        details: 'This is a simple QR code generator web application that allows users to create QR codes for various types of data.',
         github: 'https://github.com/krishna-singha/QR-Code-Generator',
         website: 'https://krishna-singha.github.io/QR-Code-Generator/',
+        status: 'Completed',
+        tech: ['HTML5', 'CSS3', 'JavaScript'],
+        type: 'Personal'
     },
     {
         heading: 'Tic Tac Toe',
         img: [tictacImg1, tictacImg2, tictacImg3],
-        details: 'Tic Tac Toe is a simple timeless and classic game of two-player contest that unfolds on a 3x3 grid. The project is built using HTML5, CSS3, TypeScript and React.',
+        details: 'Tic Tac Toe is a timeless and classic two-player game played on a 3x3 grid. Each player takes turns marking a cell with either an "X" or an "O"',
         github: 'https://github.com/krishna-singha/Tic-Tac-Toe',
         website: 'https://krishna-singha.github.io/Tic-Tac-Toe',
+        status: 'Completed',
+        tech: ['TypeScript', 'React', 'CSS3'],
+        type: 'Personal'
     },
     {
         heading: 'Old Portfolio',
         img: [portfolioImg1, portfolioImg2, portfolioImg3],
-        details: 'Welcome to my personal portfolio website! This website is designed to provide an overview of my professional background, showcase my projects, skills, education, blogs, and more.',
+        details: 'This is my old personal portfolio website! This website is designed to provide an overview of my professional background.',
         github: '',
         website: 'https://krishna-singha.github.io/old-portfolio/',
+        status: 'Completed',
+        tech: ['HTML5', 'CSS3', 'SCSS', 'JavaScript'],
+        type: 'Personal'
     },
     {
         heading: 'MedConsole Pro',
         img: [medconsoleImg1, medconsoleImg2, medconsoleImg3],
-        details: 'The MedConsole Pro is a JavaScript command-line interface designed to provide users with the ability to register, login, and manage appointments with doctors. For more, check out my GitHub repository.',
+        details: 'The MedConsole Pro is a JavaScript command-line interface designed to provide users with the ability to register, login, and manage appointments with doctors.',
         github: 'https://github.com/krishna-singha/MedConsole-Pro',
         website: '',
+        status: 'Completed',
+        tech: ['JavaScript', 'Hashing'],
+        type: 'Personal'
     },
     {
         heading: 'Zerodha Clone',
         img: [zerodhaImg1, zerodhaImg2, zerodhaImg3],
-        details: 'This project is a clone of the homepage of Zerodha, a leading stock brokerage platform in India. Using HTML5, CSS3, SCSS, and JavaScript. To see a live demo, click on the website button.',
+        details: `This project is a clone of the homepage of Zerodha, a leading stock brokerage platform in India. It aims to replicate the design, layout, and functionality of Zerodha's homepage`,
         github: 'https://github.com/krishna-singha/Zerodha-Clone',
         website: 'https://krishna-singha.github.io/Zerodha-Clone/',
+        status: 'Completed',
+        tech: ['HTML5', 'CSS3', 'SCSS', 'JavaScript'],
+        type: 'Personal'
     },
     {
         heading: 'Apple Clone',
         img: [appleImg1, appleImg2, appleImg3],
-        details: 'This project is a clone of the homepage of Apple (India). Using HTML5, CSS3, and JavaScript. This is fully responsive on all devices. To see a live demo, click on the website button.',
+        details: 'This project is a detailed clone of the Apple (India) homepage, aiming to replicate its design, layout, and functionality..',
         github: 'https://github.com/krishna-singha/Apple-Clone',
         website: 'https://krishna-singha.github.io/Apple-Clone/',
+        status: 'Completed',
+        tech: ['HTML5', 'CSS3', 'JavaScript'],
+        type: 'Personal'
     },
 ];
 
