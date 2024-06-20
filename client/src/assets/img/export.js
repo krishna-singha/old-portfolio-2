@@ -7,6 +7,7 @@ import scss from "./scss.png"
 import tailwind from "./tailwind.png"
 import javascript from "./javascript.png"
 import typescript from "./typescript.png"
+import python from "./python.png"
 import react from "./react.png"
 import next from "./next.png"
 import node from "./node.png"
@@ -14,6 +15,7 @@ import express from "./express.png"
 import mongodb from "./mongodb.png"
 import graphql from "./graphql.png"
 import redux from "./redux.png"
+import recoil from "./recoil.png"
 import firebase from "./firebase.png"
 import auth0 from "./auth0.png"
 import jwt from "./jwt.svg"
@@ -46,6 +48,7 @@ export {
     tailwind,
     javascript,
     typescript,
+    python,
     react,
     next,
     node,
@@ -53,6 +56,7 @@ export {
     mongodb,
     graphql,
     redux,
+    recoil,
     firebase,
     auth0,
     jwt,
