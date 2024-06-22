@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const port = process.env.PORT || 8000;
 const MongoDBUrl = process.env.MONGODB_URL;
-const { FRONTEND_URL } = require('./config');
+const { FRONTEND_URL, BACKEND_URL } = require('./config');
 const contactModel = require('./models/contact.model');
 const adminModel = require('./models/admin.model');
 const buildModel = require('./models/build.model');
@@ -35,6 +35,19 @@ app.get('/', (req, res) => {
     res.send('Server is running!');
 });
 
+app.post('/admin', async (req, res) => {
+    try {
+        const { email, uid } = req.body;
+        const user = await adminModel.findOne({ email, uid });
+        if (user) {
+            return res.status(200).send("admin");
+        }
+        return res.status(401).send("not an admin");
+    } catch (error) {
+        return res.status(500).send("Internal Server Error");
+    }
+});
+
 // Route to add a new contact
 app.post('/contact', async (req, res) => {
     try {
@@ -52,30 +65,21 @@ app.post('/contact', async (req, res) => {
 });
 
 // Admin route to fetch contacts from backend
-app.post('/admin', async (req, res) => {
+app.post('/admin/contact', async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = await adminModel.findOne({ email, password });
-        if (user) {
-            const response = await contactModel.find({}).sort({ _id: -1 });
-            return res.status(200).send(response);
+        const { email, uid } = req.body;
+        const user = await adminModel.findOne({ email, uid });
+        if (!user) {
+            return res.status(401).send("Unauthorized");
         }
-        return res.status(401).send({ email: "", password: "", createdAt: "" });
-    } catch (error) {
+        const contacts = await contactModel.find({}).sort({ _id: -1 });
+        return res.status(200).send(contacts);
+    }
+    catch (error) {
         return res.status(500).send("Internal Server Error");
     }
 });
 
-// Admin route to delete a contact
-app.delete('/admin/:id', async (req, res) => {
-    try {
-        const id = req.params.id;
-        await contactModel.findOneAndDelete({ _id: id });
-        return res.status(200).send("Deleted");
-    } catch (error) {
-        return res.status(500).send("Internal Server Error");
-    }
-});
 
 // Route to add a new build
 app.post('/build', async (req, res) => {
@@ -91,6 +95,42 @@ app.post('/build', async (req, res) => {
         return res.sendStatus(201);
     } catch (error) {
         console.error("Error adding build:", error);
+        return res.status(500).send("Internal Server Error");
+    }
+});
+
+// Route to get all build messages
+app.post('/admin/build', async (req, res) => {
+    try {
+        const { email, uid } = req.body;
+        const user = await adminModel.findOne({ email, uid });
+        if (!user) {
+            return res.status(401).json("Unauthorized");
+        }
+        const build = await buildModel.find({}).sort({ _id: -1 });
+        return res.status(200).json(build);
+    } catch (error) {
+        return res.status(500).json("Internal Server Error");
+    }
+});
+
+// Admin route to delete a contact
+app.delete('/admin/contact/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        await contactModel.findOneAndDelete({ _id: id });
+        return res.status(200).send("Deleted");
+    } catch (error) {
+        return res.status(500).send("Internal Server Error");
+    }
+});
+// Admin route to delete a build
+app.delete('/admin/build/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        await buildModel.findOneAndDelete({ _id: id });
+        return res.status(200).send("Deleted");
+    } catch (error) {
         return res.status(500).send("Internal Server Error");
     }
 });

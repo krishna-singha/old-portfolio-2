@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Admin from "./Admin";
 import Build from "./Build";
 import Error from "./Error";
+import Auth from "./Auth";
 
 export {
     Template,
@@ -16,4 +17,5 @@ export {
     Admin,
     Build,
     Error,
+    Auth,
 }

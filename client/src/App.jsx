@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Template, Home, Blogs, Projects, Contact, Admin, Build, Error } from "./components/pages/export"
+import { Template, Home, Blogs, Projects, Contact, Admin, Build, Error, Auth } from "./components/pages/export"
+import ContactMessage from './components/Contact.message'
+import BuildMessage from './components/Build.message'
 
 function App() {
 
@@ -14,6 +16,9 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/build' element={<Build />} />
+          <Route path='/auth' element={<Auth />} />
+          <Route path='/admin/contact-message' element={<ContactMessage />} />
+          <Route path='/admin/build-message' element={<BuildMessage />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
