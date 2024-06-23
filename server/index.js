@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
-
 const port = process.env.PORT || 8000;
 const MongoDBUrl = process.env.MONGODB_URL;
 const { FRONTEND_URL, BACKEND_URL } = require('./config');
