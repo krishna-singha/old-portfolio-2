@@ -1,5 +1,5 @@
-import { html, css, scss, tailwind, javascript, typescript, python, react, next, node, express, mongodb, graphql, redux, recoil, firebase, auth0, jwt, npm, ejs, postman, vite, restapi, figma, canva, c, cpp, git, github, vscode, bootstrap, vercel, netlify, railway } from "../../assets/img/export";
-import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3, virtuogolaImg1, virtuogolaImg2, virtuogolaImg3 } from "../../assets/images/index"
+import { html, css, scss, tailwind, javascript, typescript, python, react, next, node, express, mongodb, graphql, redux, recoil, firebase, auth0, jwt, npm, ejs, postman, vite, restapi, figma, canva, c, cpp, git, github, vscode, bootstrap, vercel, netlify, railway } from "../../assets/skills_images/export";
+import { appleImg1, appleImg2, appleImg3, medconsoleImg1, medconsoleImg2, medconsoleImg3, portfolioImg1, portfolioImg2, portfolioImg3, qrcodeImg1, qrcodeImg2, qrcodeImg3, tictacImg1, tictacImg2, tictacImg3, zerodhaImg1, zerodhaImg2, zerodhaImg3, kdagImg1, kdagImg2, kdagImg3, cyberphoenixImg1, cyberphoenixImg2, cyberphoenixImg3, virtuogolaImg1, virtuogolaImg2, virtuogolaImg3 } from "../../assets/projects_images/index"
 
 const navConstrain = [
     {
