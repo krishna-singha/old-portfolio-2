@@ -17,10 +17,6 @@ const navConstrain = [
     {
         path: '/contact',
         title: 'Contact me',
-    },
-    {
-        path: '/auth',
-        title: 'Login'
     }
 ];
 

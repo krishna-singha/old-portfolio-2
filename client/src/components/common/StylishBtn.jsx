@@ -1,4 +1,4 @@
-import { star } from "../../assets/img/export";
+import { star } from "../../assets/skills_images/export";
 
 const StylishBtn = ({ text }) => {
     return (

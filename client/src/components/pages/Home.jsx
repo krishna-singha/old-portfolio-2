@@ -5,7 +5,7 @@ import About from "../About";
 import { StylishBtn } from "../common/export"
 import SubNavbar from "../navbar/SubNavbar";
 import Terminal from "../Terminal";
-import { krishna } from "../../assets/img/export";
+import { krishna } from "../../assets/skills_images/export";
 
 const Home = () => {
 

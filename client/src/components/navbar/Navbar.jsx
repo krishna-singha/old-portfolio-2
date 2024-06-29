@@ -31,7 +31,7 @@ const Navbar = () => {
                     photoURL: user.photoURL,
                     uid: user.uid
                 });
-                
+
                 const isAdmin = async () => {
                     const response = await fetch(`${BACKEND_URL}/admin`, {
                         method: 'POST',
@@ -55,7 +55,7 @@ const Navbar = () => {
         });
     }, [setUser]);
 
-    { user && console.log(user.email)}
+    { user && console.log(user.email) }
     return (
         <header className="z-[999] w-screen fixed top-0 left-0 bg-primary ">
             <nav className="flex justify-between items-center max-w-[1280px] mx-auto py-3 px-4 relative">
@@ -81,28 +81,43 @@ const Navbar = () => {
                             </NavLink>
                         )
                     })}
-                    {/* {user && admin && ( */}
-                    {user && (
-                        <NavLink to={'/admin'}
-                            onClick={() => closeMenu()}
-                            className={({ isActive }) =>
-                                `text-xl font-kanit font-[300] hover:text-secondary
+                    {
+                       user && admin && (
+                            <NavLink to={'/admin'}
+                                onClick={() => closeMenu()}
+                                className={({ isActive }) =>
+                                    `text-xl font-kanit font-[300] hover:text-secondary
+                            ${isActive ?
+                                        "text-secondary"
+                                        : ""}`
+                                }>
+                                Admin
+                            </NavLink>
+                        )
+                    }
+                    {
+                        user ? (
+                            <div>
+                                <span onClick={() => signOut(auth)}
+                                    className={`text-xl font-kanit font-[300] hover:text-secondary cursor-pointer`}>
+                                    Logout
+                                </span>
+                            </div>
+                        )
+                            :
+                            (
+                                <NavLink to={"/auth"}
+                                    onClick={() => closeMenu()}
+                                    className={({ isActive }) =>
+                                        `text-xl font-kanit font-[300] hover:text-secondary
                                     ${isActive ?
-                                    "text-secondary"
-                                    : ""}`
-                            }>
-                            Admin
-                        </NavLink>
-                    )}
-
-                    {user && (
-                        <div>
-                            <span onClick={() => signOut(auth)}
-                                className={`text-xl font-kanit font-[300] hover:text-secondary cursor-pointer`}>
-                                Logout
-                            </span>
-                        </div>
-                    )}
+                                            "text-secondary"
+                                            : ""}`
+                                    }>
+                                    Login
+                                </NavLink>
+                            )
+                    }
 
                 </div>
                 <div className="ss:hidden">

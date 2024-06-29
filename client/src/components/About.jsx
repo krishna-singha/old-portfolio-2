@@ -1,5 +1,5 @@
 import { Heading } from "./common/export"
-import { aboutIcons } from "../assets/img/export"
+import { aboutIcons } from "../assets/skills_images/export"
 import styles from "./style";
 import resume from "../assets/pdf/resume.pdf"
 

@@ -1,4 +1,4 @@
-import { blank } from "../../assets/img/export"
+import { blank } from "../../assets/skills_images/export"
 import styles from "../style"
 
 const BlogsCard = () => {

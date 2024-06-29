@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const port = process.env.PORT || 8000;
 const MongoDBUrl = process.env.MONGODB_URL;
-const { FRONTEND_URL, BACKEND_URL } = require('./config');
+const { FRONTEND_URL } = require('./config');
 const contactModel = require('./models/contact.model');
 const adminModel = require('./models/admin.model');
 const buildModel = require('./models/build.model');
