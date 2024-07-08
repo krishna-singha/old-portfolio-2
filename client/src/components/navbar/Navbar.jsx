@@ -82,7 +82,7 @@ const Navbar = () => {
                         )
                     })}
                     {
-                       user && admin && (
+                        user && admin && (
                             <NavLink to={'/admin'}
                                 onClick={() => closeMenu()}
                                 className={({ isActive }) =>
@@ -96,7 +96,7 @@ const Navbar = () => {
                         )
                     }
                     {
-                        user ? (
+                        user && (
                             <div>
                                 <span onClick={() => signOut(auth)}
                                     className={`text-xl font-kanit font-[300] hover:text-secondary cursor-pointer`}>
@@ -104,19 +104,6 @@ const Navbar = () => {
                                 </span>
                             </div>
                         )
-                            :
-                            (
-                                <NavLink to={"/auth"}
-                                    onClick={() => closeMenu()}
-                                    className={({ isActive }) =>
-                                        `text-xl font-kanit font-[300] hover:text-secondary
-                                    ${isActive ?
-                                            "text-secondary"
-                                            : ""}`
-                                    }>
-                                    Login
-                                </NavLink>
-                            )
                     }
 
                 </div>
