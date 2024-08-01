@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Template, Home, Blogs, Projects, Contact, Admin, Build, Error, Auth } from "./components/pages/export"
@@ -5,6 +6,21 @@ import ContactMessage from './components/Contact.message'
 import BuildMessage from './components/Build.message'
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return(
+      <div className='flex items-center justify-center h-screen w-screen'>
+        <div className="loader"></div>
+      </div>
+    );
+  }
 
   return (
     <BrowserRouter>
