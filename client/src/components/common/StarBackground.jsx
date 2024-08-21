@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from "react";
+import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { random } from "lodash";
@@ -6,7 +6,7 @@ import { random } from "lodash";
 const StarBackground = (props) => {
   const ref = useRef();
   const sphere = useMemo(() => {
-    const positions = new Float32Array(5000 * 3);
+    const positions = new Float32Array(1000 * 3);
     for (let i = 0; i < positions.length; i += 3) {
       const phi = random(0, 2 * Math.PI, true);
       const costheta = random(-1, 1, true);
