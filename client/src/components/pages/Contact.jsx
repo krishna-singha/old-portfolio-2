@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Heading from '../common/Heading';
 import styles from '../style';
 import { BACKEND_URL } from "../../config"
@@ -91,7 +91,7 @@ const Contact = () => {
             <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row gap-8 items-center justify-between my-[2rem] ss:my-[5rem]">
                 <div className="bg-boxBg rounded-md p-6 flex flex-col gap-8 h-fit">
                     <div>
-                        <p className={`${styles.heading4} text-dimWhite`}>Let's discuss <br /> on something <span className="text-secondary">cool</span> <br /> together</p>
+                        <p className={`${styles.heading4} text-dimWhite`}>Let&apos;s discuss <br /> on something <span className="text-secondary">cool</span> <br /> together</p>
                     </div>
                     <div>
                         <a href="mailto:krishnasingha.dev@gmail.com" className={`${styles.paragraph}`}>

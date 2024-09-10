@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Heading from '../common/Heading';
 import axios from 'axios';
 import { BACKEND_URL } from "../../config";

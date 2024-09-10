@@ -1,33 +1,38 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
 const port = process.env.PORT || 8000;
-const MongoDBUrl = process.env.MONGODB_URL;
 const { FRONTEND_URL } = require('./config');
-const contactModel = require('./models/contact.model');
-const adminModel = require('./models/admin.model');
-const buildModel = require('./models/build.model');
+const connectToMongoDB = require('./database/connection');
+const contactModel = require('./database/models/contact.model');
+const adminModel = require('./database/models/admin.model');
+const buildModel = require('./database/models/build.model');
 
 // Middleware
-app.use(cors({
-    origin: FRONTEND_URL,
-    methods: ['GET', 'POST', 'DELETE'],
-}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors(
+    {
+        origin: FRONTEND_URL,
+        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+        preflightContinue: false,
+        optionsSuccessStatus: 204,
+    }
+));
+app.use("/", (req, res, next) => {
+    if (req.headers.origin === FRONTEND_URL) {
+        next();
+    } else {
+        res.status(403).json({
+            error: "Unauthorized",
+            message: `Sorry, you are not allowed to access this API.`,
+        });
+    }
+});
 
 // Connect to MongoDB
-async function connectToMongoDB() {
-    try {
-        await mongoose.connect(MongoDBUrl);
-        console.log('Connected to database');
-    } catch (err) {
-        console.error('Error connecting to database', err);
-    }
-}
 connectToMongoDB();
 
 app.get('/', (req, res) => {
@@ -37,10 +42,15 @@ app.get('/', (req, res) => {
 app.post('/admin', async (req, res) => {
     try {
         const { email, uid } = req.body;
-        const user = await adminModel.findOne({ email, uid });
-        if (user) {
-            return res.status(200).send("admin");
-        }
+        console.log("Req", email, uid);
+        // const user = await adminModel.findOne({ email, uid });
+        // if (user) {
+        //     console.log("admin");
+        //     return res.status(200).send("admin");
+        // }
+        // console.log("not admin");
+        const getData = await adminModel.find({});
+        console.log("Res", getData);
         return res.status(401).send("not an admin");
     } catch (error) {
         return res.status(500).send("Internal Server Error");

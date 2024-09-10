@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { navConstrain } from "../constrains";
 import { useRecoilState } from "recoil";
@@ -53,9 +53,8 @@ const Navbar = () => {
                 setUser(null);
             }
         });
-    }, [setUser]);
+    }, [setUser, setAdmin]);
 
-    { user && console.log(user.email) }
     return (
         <header className="z-[999] w-screen fixed top-0 left-0 bg-primary ">
             <nav className="flex justify-between items-center max-w-[1280px] mx-auto py-3 px-4 relative">
