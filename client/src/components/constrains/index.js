@@ -194,26 +194,6 @@ const skillsConstrain = [
 
 const projectsConstrain = [
     {
-        heading: 'URL Shortner',
-        img: ["", "", ""],
-        details: `URL Shortener is a tool designed to shorten long URLs into shorter, more readable links. It's particularly useful for sharing links on social media platforms, in emails, or wherever space is limited.`,
-        tech: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Vercel'],
-        type: 'Personal',
-        status: 'Ongoing',
-        github: '',
-        website: '',
-    },
-    {
-        heading: 'VirtuoGola',
-        img: [virtuogolaImg1, virtuogolaImg2, virtuogolaImg3],
-        details: `VirtuoGola allows users to post content such as text, images, or videos and interact with each other through likes and comments.`,
-        tech: ['TypeScipt', 'React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Redux', 'Vercel'],
-        type: 'Personal',
-        status: 'Ongoing',
-        github: '',
-        website: '',
-    },
-    {
         heading: 'KDAG Task',
         img: [kdagImg1, kdagImg2, kdagImg3],
         details: `This project is a web application designed for the Kharagpur Data Analytics Group's society web team selection process to facilitate course offerings.`,
