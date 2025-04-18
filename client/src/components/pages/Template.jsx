@@ -6,7 +6,7 @@ import StarsCanvas from "../common/StarBackground";
 const Template = () => {
     return (
         <div className="overflow-x-hidden">
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
             <Navbar />
             <Outlet />
             <Footer />
