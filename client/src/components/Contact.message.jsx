@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Heading from './common/Heading';
-import { BACKEND_URL } from "../config"
 import { useRecoilValue } from 'recoil';
 import { userAtom } from './store/user.atom';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const ContactMessage = () => {
     const [contacts, setContacts] = useState([]);

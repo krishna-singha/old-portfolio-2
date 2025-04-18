@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Heading from './common/Heading';
-import { BACKEND_URL } from "../config";
 import { useRecoilValue } from 'recoil';
 import { userAtom } from './store/user.atom';
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const BuildMessage = () => {
     const navigate = useNavigate();

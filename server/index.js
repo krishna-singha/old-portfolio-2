@@ -4,11 +4,11 @@ const app = express();
 const cors = require("cors");
 
 const port = process.env.PORT || 8000;
-const { FRONTEND_URL } = require("./config");
 const connectToMongoDB = require("./database/connection");
 const contactModel = require("./database/models/contact.model");
 const adminModel = require("./database/models/admin.model");
 const buildModel = require("./database/models/build.model");
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 // Middleware
 app.use(express.json());

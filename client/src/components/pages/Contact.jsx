@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Heading from '../common/Heading';
 import styles from '../style';
-import { BACKEND_URL } from "../../config"
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 import axios from "axios";
 import { toast } from 'react-toastify';
 

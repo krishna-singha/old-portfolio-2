@@ -6,7 +6,7 @@ import { userAtom } from "../store/user.atom";
 import { adminAtom } from "../store/admin.atom";
 import { auth } from "../../auth/firebase";
 import { signOut } from "firebase/auth";
-import { BACKEND_URL } from "../../config";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 
 const Navbar = () => {
